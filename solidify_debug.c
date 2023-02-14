@@ -34,7 +34,7 @@ solidify_debug_malloc(uint size, char *file, uint line)
     if (p == NULL) {
         printf("[Solidify] Memory error: malloc call of %u bytes failed in file %s on line %u\n", size, file, line);
         solidify_debug_print_memory_state();
-        exit(0);
+        exit(1);
     }
 
     memoryState.allocations++;
@@ -52,7 +52,7 @@ solidify_debug_realloc(void *pointer, uint size, char *file, uint line)
     if (p == NULL) {
         printf("[Solidify] Memory error: realloc call of %u bytes failed in file %s on line %u\n", size, file, line);
         solidify_debug_print_memory_state();
-        exit(0);
+        exit(1);
     }
 
     return p;
