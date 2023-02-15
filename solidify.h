@@ -7,6 +7,9 @@
 // Licensed under the MIT license (https://opensource.org/licenses/MIT)
 */
 
+#ifndef SOLIDIFY_H
+#define SOLIDIFY_H
+
 /* --- Types --- */
 #if !defined(SOLIDIFY_NO_TYPES)
 #define SOLIDIFY_NO_TYPES
@@ -42,3 +45,5 @@ extern void solidify_debug_free(void *pointer, char *file, uint line);
 #define PI 3.1415926535
 #define E  2.7182818284
 #endif
+
+#endif /* SOLIDIFY_H */
