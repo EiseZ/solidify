@@ -14,14 +14,14 @@
 #if !defined(SOLIDIFY_NO_TYPES)
 #define SOLIDIFY_NO_TYPES
 #include <stdint.h>
-typedef uint8_t  uint8;
+typedef uint8_t uint8;
 typedef uint16_t uint16;
 typedef uint32_t uint32;
 typedef uint64_t uint64;
-typedef int8_t   int8;
-typedef int16_t  int16;
-typedef int32_t  int32;
-typedef int64_t  int64;
+typedef int8_t int8;
+typedef int16_t int16;
+typedef int32_t int32;
+typedef int64_t int64;
 
 typedef unsigned int uint;
 #endif
@@ -31,7 +31,8 @@ typedef unsigned int uint;
 #define SOLIDIFY_NO_DEBUG
 extern void solidify_debug_print_memory_state(void);
 extern void *solidify_debug_malloc(uint size, char *file, uint line);
-extern void *solidify_debug_realloc(void *pointer, uint size, char *file, uint line);
+extern void *solidify_debug_realloc(void *pointer, uint size, char *file,
+                                    uint line);
 extern void solidify_debug_free(void *pointer, char *file, uint line);
 
 #define malloc(n) solidify_debug_malloc(n, __FILE__, __LINE__)
